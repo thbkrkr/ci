@@ -11,6 +11,6 @@ job('build_qli_master') {
         scm('H * * * *')
     }
     steps {
-        shell('make -C qws build')
+        shell('make -C qws all')
     }
 }
