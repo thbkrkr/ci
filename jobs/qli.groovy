@@ -1,8 +1,8 @@
-job('build_docker-toolbox_master') {
+job('build_qli_master') {
     scm {
         git {
             remote {
-                url('https://github.com/thbkrkr/docker-toolbox')
+                url('https://github.com/thbkrkr/qli')
             }
             branch('master')
         }
@@ -11,6 +11,6 @@ job('build_docker-toolbox_master') {
         scm('H * * * *')
     }
     steps {
-        shell('doo b')
+        shell('make -C qws build')
     }
 }
