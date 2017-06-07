@@ -12,6 +12,6 @@ job('build_c1_master') {
         scm('H * * * *')
     }
     steps {
-        shell('doo b')
+        shell('make build tag push deploy')
     }
 }
