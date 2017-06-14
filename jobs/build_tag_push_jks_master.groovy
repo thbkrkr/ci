@@ -1,5 +1,5 @@
-freeStyleJob('jks') {
-    displayName('jks')
+freeStyleJob('build_jks') {
+    displayName('build_jks')
     description('')
 
     properties {

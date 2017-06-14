@@ -1,5 +1,5 @@
-freeStyleJob('docker-toolbox') {
-    displayName('docker-toolbox')
+freeStyleJob('build_docker-toolbox') {
+    displayName('build_docker-toolbox')
     description('')
 
     properties {

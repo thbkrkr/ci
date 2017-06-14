@@ -1,5 +1,5 @@
-freeStyleJob('logz') {
-    displayName('logz')
+freeStyleJob('build_logz') {
+    displayName('build_logz')
     description('')
 
     properties {

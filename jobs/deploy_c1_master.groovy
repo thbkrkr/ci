@@ -1,5 +1,5 @@
-freeStyleJob('build_c1') {
-    displayName('build_c1')
+freeStyleJob('deploy_c1') {
+    displayName('deploy_c1')
     description('')
 
     properties {
@@ -22,11 +22,10 @@ freeStyleJob('build_c1') {
     }
 
     triggers {
-        cron('H H * * *')
-        githubPush()
+        upstream('build_c1,build_functions,build_sh-bot,build_docker-toolbox,build_dops,build_jks,build_logz,build_sysd')
     }
 
     steps {
-        shell('make build push')
+        shell('make deploy')
     }
 }

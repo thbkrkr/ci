@@ -1,5 +1,5 @@
-freeStyleJob('sysd') {
-    displayName('sysd')
+freeStyleJob('build_sysd') {
+    displayName('build_sysd')
     description('')
 
     properties {

@@ -1,5 +1,5 @@
-freeStyleJob('sh-bot') {
-    displayName('sh-bot')
+freeStyleJob('build_sh-bot') {
+    displayName('build_sh-bot')
     description('')
 
     properties {
