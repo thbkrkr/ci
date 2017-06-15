@@ -23,7 +23,7 @@ freeStyleJob('build_c1') {
 
     triggers {
         cron('H H * * *')
-        githubPush()
+        bitbucketPush()
     }
 
     steps {
