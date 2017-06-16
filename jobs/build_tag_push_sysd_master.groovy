@@ -22,7 +22,6 @@ freeStyleJob('build_sysd') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 

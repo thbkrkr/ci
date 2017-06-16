@@ -22,7 +22,6 @@ freeStyleJob('build_functions') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 

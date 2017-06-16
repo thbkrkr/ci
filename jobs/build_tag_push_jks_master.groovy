@@ -22,7 +22,6 @@ freeStyleJob('build_jks') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 

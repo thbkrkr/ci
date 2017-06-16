@@ -22,7 +22,6 @@ freeStyleJob('build_docker-toolbox') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 

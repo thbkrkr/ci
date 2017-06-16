@@ -22,7 +22,6 @@ freeStyleJob('build_sh-bot') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 

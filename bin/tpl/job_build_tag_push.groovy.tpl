@@ -1,9 +1,9 @@
-freeStyleJob('build_logz') {
-    displayName('build_logz')
-    description('')
+freeStyleJob('build_${name}') {
+    displayName('build_${name}')
+    description('${description}')
 
     properties {
-        githubProjectUrl('https://github.com/thbkrkr/logz')
+        githubProjectUrl('${repo}')
     }
 
     logRotator {
@@ -14,15 +14,15 @@ freeStyleJob('build_logz') {
     scm {
         git {
             remote {
-                url('https://github.com/thbkrkr/logz')
-                credentials('public')
+                url('${origin}')
+                credentials('${credentials}')
             }
-            branches('*/master')
+            branches('*/${branch}')
         }
     }
 
     triggers {
-        githubPush()
+        ${gitProvider}Push()
     }
 
     steps {

@@ -22,11 +22,10 @@ freeStyleJob('build_c1') {
     }
 
     triggers {
-        cron('H H * * *')
         bitbucketPush()
     }
 
     steps {
-        shell('make build push')
+        shell('doo bp')
     }
 }

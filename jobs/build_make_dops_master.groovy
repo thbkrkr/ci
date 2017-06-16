@@ -22,14 +22,10 @@ freeStyleJob('build_dops') {
     }
 
     triggers {
-        cron('H H * * *')
         githubPush()
     }
 
     steps {
-        shell('doo b')
-        shell('doo t')
-        shell('doo p')
-        shell('docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2> /dev/null || true')
+        shell('make build')
     }
 }
