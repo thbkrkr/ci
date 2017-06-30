@@ -22,7 +22,7 @@ freeStyleJob('deploy_c1') {
     }
 
     triggers {
-        upstream('build_c1,build_functions,build_sh-bot,build_docker-toolbox,build_dops,build_jks,build_logz')
+        upstream('build_c1,build_toctoc,build_functions,build_sh-bot,build_docker-toolbox,build_dops,build_jks,build_logz')
     }
 
     steps {

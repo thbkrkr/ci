@@ -13,6 +13,7 @@ generate_all_jobs() {
   gen_build_master_github_job jks
   gen_build_master_github_job sysd
   gen_build_master_github_job logz
+  gen_build_master_github_job toctoc
 
   gen build_make sh-bot master \
     https://github.com/thbkrkr/qli/sh-bot https://github.com/thbkrkr/qli "public" \
@@ -25,7 +26,7 @@ generate_all_jobs() {
   gen deploy_make c1 master \
     https://bitbucket.org/thb/c1 "git@bitbucket.org:thb/c1.git" "ci-bitbucket.id_rsa" \
     "make deploy" \
-    'build_c1,build_functions,build_sh-bot,build_docker-toolbox,build_dops,build_jks,build_logz'
+    'build_c1,build_toctoc,build_functions,build_sh-bot,build_docker-toolbox,build_dops,build_jks,build_logz'
 
   gen build_make dops master \
     https://github.com/thbkrkr/dops "https://github.com/thbkrkr/dops" "public" \
@@ -47,6 +48,7 @@ echo '
   dops
   jks
   logz
+  toctoc
   sysd
 '
 }
